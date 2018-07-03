@@ -1,4 +1,4 @@
-package zansavio.victorio.com.umlmobile;
+package zansavio.victorio.com.umlmobile.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,11 +11,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import zansavio.victorio.com.umlmobile.view.LineView;
+import zansavio.victorio.com.umlmobile.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
     //private View entity;

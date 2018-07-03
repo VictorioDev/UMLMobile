@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="zansavio.victorio.com.umlmobile.MainActivity">
+    tools:context="zansavio.victorio.com.umlmobile.activity.MainActivity">
     <FrameLayout
         android:orientation="horizontal"
         android:id="@+id/mainContainer"

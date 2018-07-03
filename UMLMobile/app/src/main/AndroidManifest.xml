@@ -3,6 +3,7 @@
     package="zansavio.victorio.com.umlmobile">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".FirstActivity">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.FirstActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScanActivity"/>
-
-
+        <activity android:name=".activity.ScanActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".activity.DrawActivity"
+            android:theme="@style/AppThemeFullscreen"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize"
+            />
     </application>
 
 </manifest>

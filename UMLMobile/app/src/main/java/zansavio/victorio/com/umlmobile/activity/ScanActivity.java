@@ -1,4 +1,4 @@
-package zansavio.victorio.com.umlmobile;
+package zansavio.victorio.com.umlmobile.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -47,15 +47,15 @@ public class ScanActivity extends AppCompatActivity implements ZBarScannerView.R
     @Override
     public void handleResult(Result rawResult) {
         // Do something with the result here
-        Log.v(TAG, rawResult.getContents()); // Prints scan results
-        Log.v(TAG, rawResult.getBarcodeFormat().getName()); // Prints the scan format (qrcode, pdf417 etc.)
+        //Log.v(TAG, rawResult.getContents()); // Prints scan results
+        //Log.v(TAG, rawResult.getBarcodeFormat().getName()); // Prints the scan format (qrcode, pdf417 etc.)
 
         // If you would like to resume scanning, call this method below:
         mScannerView.resumeCameraPreview(this);
 
-        Intent i = new Intent();
+        Intent i = new Intent(this, DrawActivity.class);
         i.putExtra("URL", rawResult.getContents());
-        setResult(RESULT_OK, i);
+        startActivity(i);
         finish();
 
     }

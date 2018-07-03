@@ -1,4 +1,4 @@
-package zansavio.victorio.com.umlmobile;
+package zansavio.victorio.com.umlmobile.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+
+import zansavio.victorio.com.umlmobile.R;
+import zansavio.victorio.com.umlmobile.pojo.Response;
+import zansavio.victorio.com.umlmobile.utils.NetworkUtils;
 
 
 public class FirstActivity extends AppCompatActivity {
@@ -23,20 +29,20 @@ public class FirstActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         btnScanear = (Button) findViewById(R.id.btnScanear);
-        tvUrl = (TextView) findViewById(R.id.txtURL);
+
 
         final Context ctx = this;
         btnScanear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i  = new Intent(ctx, ScanActivity.class);
-                startActivityForResult(i, REQUEST_CODE);
+                startActivity(i);
             }
         });
     }
 
 
-    @Override
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_OK){
@@ -53,5 +59,5 @@ public class FirstActivity extends AppCompatActivity {
         }else {
             Log.v(TAG, "Result Not ok");
         }
-    }
+    }*/
 }
