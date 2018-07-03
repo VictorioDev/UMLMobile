@@ -10,7 +10,8 @@ import java.util.List;
 public class Diagrama {
     private List<BaseElement> cases = new ArrayList<>();
     private List<BaseElement> atores = new ArrayList<>();
-    private LigacaoNode ligacoes;
+    private LigacaoNode ligacoes = new LigacaoNode();
+
     private List<Observacao> observacoes = new ArrayList<>();
 
     public List<Observacao> getObservacoes() {
